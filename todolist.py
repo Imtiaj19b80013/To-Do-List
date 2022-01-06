@@ -1,4 +1,4 @@
-data = []
+data = [] #Empty list to store data
 choice = 'random'
 
 def line():
@@ -8,9 +8,9 @@ def show_menu():
     line()
     print('MENU')
     line()
-    print('1. Add item')
+    print('1. Add an item')
     print('2. Mark as done')
-    print('3. View list')
+    print('3. View Your to-do-list')
     print('4. Exit')
     line()
     choice = input('Enter your choice: ')
@@ -26,9 +26,10 @@ while choice != '4':
         item = input('What is to be marked as done? ')
         if item in data:
             data.remove(item)
-            print('Removed item', item)
+            print(item)
+            print('Is Marked as done!')
         else:
-            print('Could not find item', item)
+            print('Could not find item in your list', item)
     elif choice == '3':
         print('List of to-do items:')
         for item in data:
